@@ -7,7 +7,7 @@ object SQLite extends Database {
   val driver = "org.sqlite.JDBC"
   val username = "root"
   val password = "knoldus"
-  //val fileName: String = "SQLite_Result"
+  val fileName: String = "SQLite_Result"
   val connection: Connection = MySQL.connectToDatabase
 
 }

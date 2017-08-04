@@ -8,7 +8,7 @@ trait Database {
   val driver: String
   val username: String
   val password: String
-  //val fileName : String
+  val fileName : String
   val connection : Connection
 
   def connectToDatabase: Connection = {
@@ -56,8 +56,7 @@ trait Database {
       }
   }
 
-  def closeConnection(connection: Connection) = {
-
+  def closeConnection(connection: Connection): Unit = {
     connection.close
   }
 

@@ -11,3 +11,5 @@ libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
 libraryDependencies += "org.xerial" % "sqlite-jdbc" % "3.19.3"
 
 libraryDependencies += "com.opencsv" % "opencsv" % "3.7"
+
+libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.0.0" % "test")

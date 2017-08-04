@@ -6,7 +6,7 @@ object MySQL extends Database {
   val driver = "com.mysql.cj.jdbc.Driver"
   val username = "root"
   val password = "aakash06"
- // val fileName: String = "MySql_Result"
+  val fileName: String = "MySql_Result"
   val connection: Connection = MySQL.connectToDatabase
 
 }
