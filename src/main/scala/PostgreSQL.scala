@@ -8,7 +8,7 @@ object PostgreSQL extends Database {
   val driver = "org.postgresql.Driver"
   val username = "postgres"
   val password = "aakash06"
-  val fileName: String = "Postgres_Result"
+ // val fileName: String = "Postgres_Result"
   val connection: Connection = MySQL.connectToDatabase
 
 

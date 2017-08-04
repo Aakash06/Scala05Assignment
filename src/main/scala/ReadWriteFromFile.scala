@@ -18,12 +18,13 @@ object ReadWriteFromFile extends ReadWrite {
   }
 
   def write(fileName: String, content: List[List[String]], dirPath: String): Boolean = {
+    val writeData = content.map(testCase=>testCase.reduce((ele1,ele2)=>ele1+","+ele2)).reduce(_ + "\n" + _)
+    //println(writeData)
 
-    val content1 = content.map(_ mkString " ") mkString "\n"
     new File(dirPath).mkdir()
-    val writeToFile = new PrintWriter(dirPath + "/" + fileName)
+    val writeToFile = new PrintWriter(dirPath + "/" + fileName + "_Result.csv")
     try {
-      writeToFile.write(content1)
+      writeToFile.write(writeData)
       writeToFile.close()
       true
     }
